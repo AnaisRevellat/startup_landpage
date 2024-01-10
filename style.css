@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body,
 html {
   width: 100%;
@@ -10,11 +16,10 @@ html {
   background-size: cover;
 }
 
-h1 { 
+h1 {
   font-size: 2rem;
   text-shadow: rgb(0, 0, 0) 1px 0 5px;
   color: white;
-
 }
 
 hr {
@@ -25,21 +30,70 @@ hr {
   opacity: 1;
 }
 
-.btn-primary {
-  border: #ff4500;
-  background-color: #ff4800f5;
-  font-weight: 700;
+
+.a_btn {
+  position: relative;
+  display: flex;
   border-radius: 300px;
-  text-transform: uppercase; 
+  padding: 20px 50px;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
+  overflow: hidden;
 }
 
-.btn-primary:hover {
-  background-color: #ff1e00;
-  border: #ff4500 solid 0.4px;
+.a_btn span {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
-.btn-xl {
-  padding: 1rem 2rem;
+.a_btn .liquid {
+  position:absolute;
+  left:0;
+  top: -80px;
+  width:200px;
+  height:200px;
+  background: #ff4800f5;
+  box-shadow: inset 0 0 50px rgba(0,0,0,.5);
+  transition: 0.5s;  
 }
 
+.a_btn:hover .liquid{
+  top: -120px;
+}
 
+.a_btn .liquid:before,
+.a_btn .liquid:after {
+  content: '';
+  position:absolute;
+  width:200%;
+  height:200%;
+  top:0;
+  left: 50%;
+  transform: translate(-50%, -75%); 
+}
+
+.a_btn .liquid:before {
+ border-radius: 45%;
+ background: rgba(20,20,20,1);
+ animation: animate 5s linear infinite;
+}
+.a_btn .liquid:after {
+  border-radius: 40%;
+  background: rgba(20,20,20,0.5);
+  animation: animate 10s linear infinite;
+} 
+@keyframes animate {
+  0%{
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100%  
+  {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+  
+}
