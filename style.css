@@ -1,0 +1,45 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  background: url(./home_chill_homepage.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 { 
+  font-size: 2rem;
+  text-shadow: rgb(0, 0, 0) 1px 0 5px;
+  color: white;
+
+}
+
+hr {
+  margin: 5px auto 20px auto;
+  color: #ff4800f5;
+  border: 1.5px solid #ff4800f5;
+  max-width: 65px;
+  opacity: 1;
+}
+
+.btn-primary {
+  border: #ff4500;
+  background-color: #ff4800f5;
+  font-weight: 700;
+  border-radius: 300px;
+  text-transform: uppercase; 
+}
+
+.btn-primary:hover {
+  background-color: #ff1e00;
+  border: #ff4500 solid 0.4px;
+}
+
+.btn-xl {
+  padding: 1rem 2rem;
+}
+
+
